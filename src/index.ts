@@ -1,10 +1,6 @@
-import morgan from "morgan";
-import app from "./app.js";
-import express from "express";
-import pingRouter from "./features/ping/router/pingRouter.js";
+import "./server/index.js";
+import { startServer } from "./server/app.js";
 
-app.use(morgan("dev"));
+const port = process.env.PORT ?? 4000;
 
-app.use(express.json());
-
-app.use("/", pingRouter);
+startServer(+port);
