@@ -20,6 +20,6 @@ const beerSchema = new Schema<BeerStructure>({
   },
 });
 
-const BeerModel = model("BeerModel", beerSchema, "beerModels");
+const BeerModel = model("beer", beerSchema, "beers");
 
 export default BeerModel;
