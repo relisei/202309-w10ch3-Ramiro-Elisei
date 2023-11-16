@@ -1,5 +1,5 @@
 export interface BeerStructure {
-  id: string;
+  _id: string;
   beerType: string;
   ibu: number;
   origin: string;
