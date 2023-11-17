@@ -8,5 +8,6 @@ const beersRepository = new BeersMongooseRepository();
 const BeersController = new BeerController(beersRepository);
 
 beersRouter.get("/", BeersController.getBeers);
+beersRouter.get("/:beerId", BeersController.getBeersById);
 
 export default beersRouter;
