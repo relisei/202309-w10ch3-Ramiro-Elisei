@@ -8,6 +8,16 @@ class BeersMongooseRepository implements BeersRepository {
 
     return beers;
   };
+
+  public async getBeersById(beerId: string): Promise<BeerStructure> {
+    const beerFromDataBase = await BeerModel.findById(beerId);
+
+    if (!beerFromDataBase) {
+      throw new Error("The beer was not found");
+    }
+
+    return beerFromDataBase;
+  }
 }
 
 export default BeersMongooseRepository;
